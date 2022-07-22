@@ -1,1 +1,36 @@
 
+public static void Main(string[] args)
+    {
+        
+        string s = Console.ReadLine();
+        string p = Console.ReadLine();
+        //Console.WriteLine(s[0]);
+        int k = 0, n = 0;
+        for (int i = 0; i < s.Length; i++)
+        {
+            for (int j = 0; j < s.Length; j++)
+            {
+                if (s[i] == s[j])
+                {
+                    k++;
+                }
+
+            }
+            for (int l = 0; l < p.Length; l++)
+            {
+                if (s[i] == p[l])
+                {
+                    n++;
+                }
+            }
+            if (k != n)
+            {
+                Console.WriteLine(s[i]);
+                break;
+            }
+            k = 0;
+            n = 0;
+        }
+
+
+    }
